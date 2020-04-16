@@ -79,7 +79,9 @@ export default {
 
       const userUpdate = await user.update(req.body);
 
-      return res.json(userUpdate);
+      const { id, name, city, uf } = userUpdate;
+
+      return res.json({ id, email, name, city, uf });
     } catch (err) {
       return res.status(500).json({ error: 'Error to update user' });
     }
