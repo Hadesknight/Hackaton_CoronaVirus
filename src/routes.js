@@ -6,7 +6,7 @@ const routes = new Router();
 
 /* Rota sem necessidade de Login */
 
-routes('/signup', UserController.store);
+routes.post('/signup', UserController.store);
 
 routes.use(authMiddleware);
 /* Rotas com necessidade de Login */
