@@ -15,7 +15,7 @@ Parametros:
 	"email":"fernandorato.0@hotmail.com",
 	"city":"Capelinha",
 	"uf":"Mg",
-	"birth_date":"1990-04-23",
+	"age":"29",
 	"password":"123456"
 }
 
