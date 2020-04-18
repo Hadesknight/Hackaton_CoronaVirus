@@ -1,7 +1,5 @@
 import * as Yup from 'yup';
 import jwt from 'jsonwebtoken';
-import { formatDistanceStrict } from 'date-fns';
-import pt from 'date-fns/locale/pt';
 import User from '../models/User';
 import auth from '../../config/auth';
 
@@ -31,12 +29,7 @@ export default {
         return res.status(401).json({ error: 'Password is not Correct' });
       }
 
-      const { id, name, city, uf, birth_date } = user;
-
-      const age = formatDistanceStrict(new Date(), birth_date, {
-        unit: 'year',
-        locale: pt,
-      });
+      const { id, name, city, uf, age } = user;
 
       return res.json({
         user: {

@@ -8,7 +8,7 @@ export default {
       email: Yup.string().email().required(),
       city: Yup.string().required(),
       uf: Yup.string().required().max(2),
-      birth_date: Yup.date().required(),
+      age: Yup.number().required(),
       password: Yup.string().required().min(6),
     });
 
@@ -45,7 +45,7 @@ export default {
       email: Yup.string().email(),
       city: Yup.string(),
       uf: Yup.string().max(2),
-      birth_date: Yup.date(),
+      age: Yup.number(),
       oldPassword: Yup.string().min(6),
       password: Yup.string()
         .min(6)
